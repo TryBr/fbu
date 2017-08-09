@@ -1,0 +1,195 @@
+/*---------------
+    #Polls
+---------------*/
+.polls {
+  background: #f4f4f3;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  p {
+    font-weight: bold;
+  }
+  .before-the-answer {
+    margin-top: 30px;
+    .form-radio-wrapper {
+      margin-bottom: 10px;
+      line-height: 25px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      input[type=radio]{
+       position: absolute;
+       visibility: hidden;
+      }
+
+      .check {
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background: #f4f4f3;
+        position: relative;
+        float: left;
+        margin-right: 10px;
+        border: 2px solid #acacab;
+        margin-top: 4px;
+        cursor: pointer;
+      }
+
+      input[type=radio]:checked ~ .check .check-bullet {
+        width: 7px;
+        height: 7px;
+        position: absolute;
+        top: 2px;
+        left: 0px;
+        background: #262626;
+        border-radius: 50%;
+        margin: 0 auto;
+        right: 0;
+        opacity: 1 !important;
+      }
+
+      .check-bullet {
+        border-radius: 50%;
+      }
+
+      &:hover {
+        .check {
+          .check-bullet {
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            top: 2px;
+            left: 0px;
+            background: #262626;
+            border-radius: 50%;
+            margin: 0 auto;
+            right: 0;
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .form-radio__label {
+        font-weight: normal;
+        font-size: 15px;
+        color: #262626;
+        cursor: pointer;
+      }
+    }
+
+    .answer-form__btn {
+      margin-top: 20px;
+      width: 175px;
+      height: 55px;
+      display: block;
+      text-decoration: none;
+      color: #262626;
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: center;
+      border: 2px solid #c8c8ab;
+      z-index: 1;
+      background: #f4f4f3;
+      font-family: "MuseoSansMedium";
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        background: #c8c8ab;
+      }
+    }
+  }
+
+
+}
+
+.polls-after-answer {
+  .after-the-answer {
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    margin-top: 35px;
+    &:first-child {
+      margin-top: 35px;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+      padding-bottom: 0px;
+      border-bottom: 0px;
+    }
+
+    p {
+      font-weight: bold;
+    }
+
+  }
+
+  .progress-group {
+    margin-top: 20px;
+    width: 430px;
+    .progress__title {
+      color: #262626;
+      font-size: 15px;
+      font-weight: 300;
+      margin-bottom: 5px;
+      position: relative;
+      padding-left: 25px;
+      &:before {
+        content: '';
+        width: 12px;
+        height: 1px;
+        background: #c8c8ab;
+        position: absolute;
+        left: 0px;
+        top: 10px;
+      }
+    }
+
+    .progress {
+      border-radius: 0px;
+      box-shadow: none;
+      height: 10px;
+      background: #dbdbda;
+      margin-left: 25px;
+      .progress-bar {
+        background: #ccccb4;
+        border-radius: 0px;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+
+
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .polls-after-answer {
+    .progress-group {
+        width: 100%;
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

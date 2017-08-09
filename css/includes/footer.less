@@ -1,0 +1,145 @@
+/*---------------
+    #Footer
+---------------*/
+.footer {
+  height: 273px;
+  background: #272727;
+  padding-top: 55px;
+
+  .container {
+    padding: 0px;
+  }
+
+  .footer-copyright {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+  }
+
+  .footer-contacts {
+    .contacts-item {
+      margin-bottom: 20px;
+      .contacts-item__title {
+        color: #9b9b9b;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 23px;
+        float: left;
+        width: 70px;
+        margin-right: 10px;
+      }
+
+      .contacts-item__info {
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 23px;
+        float: left;
+        width: 70%;
+
+        .contacts-item__link {
+          border-bottom: 1px solid;
+          text-decoration: none;
+          color: #ffffff;
+          margin-bottom: 20px;
+          display: inline-block;
+          height: 20px;
+          &:last-child {
+            margin-bottom: 0px;
+          }
+          &:hover {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-developer {
+    color: #9b9b9b;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+    .footer-developer__link {
+      color: #9b9b9b;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 23px;
+      text-decoration: none;
+      border-bottom: 1px solid;
+    }
+  }
+
+  .footer-social {
+    margin-bottom: 20px;
+    .footer-social-item {
+      float: left;
+      margin-right: 10px;
+      color: #fff;
+      width: 15px;
+      text-align: center;
+      font-size: 16px;
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      .footer-social-item__link{
+        color: #fff;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+
+/*---------------
+    #Responsive
+---------------*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: auto;
+
+    .container {
+      padding: 0 15px;
+    }
+
+    .footer-copyright {
+      margin-bottom: 40px;
+    }
+
+    .footer-contacts {
+      margin-bottom: 40px;
+    }
+
+    .footer-social {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1024px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

@@ -1,0 +1,343 @@
+/*---------------
+    #Contacts
+---------------*/
+.contacts-page {
+  .contacts-block {
+    margin-bottom: 40px;
+    .contacts-block-icon {
+      width: 72px;
+      height: 72px;
+      border: 2px solid #f4f4f3;
+      text-align: center;
+      line-height: 72px;
+      float: left;
+      margin-right: 30px;
+      position: relative;
+      .contacts-block__icon {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+      }
+
+      &.contacts-block-icon--hide {
+        display: none;
+      }
+
+      &.icon--phone {
+        img {
+          top: 14px;
+          left: 0px;
+          right: 0px;
+          width: 40px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      &.icon--address {
+        img {
+          top: 8px;
+          left: 0px;
+          right: 0px;
+          width: 40px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      &.icon--email {
+        img {
+          top: 16px;
+          left: 0px;
+          right: 0px;
+          width: 46px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      &.icon--time {
+        img {
+          top: 14px;
+          left: 0px;
+          right: 0px;
+          width: 46px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .contacts-block-info {
+      float: left;
+      width: 468px;
+      .contacts-block__title {
+        color: #262626;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-family: "MuseoSansMedium";
+      }
+
+      p {
+        color: #262626;
+        font-size: 15px;
+        margin: 0px;
+      }
+
+      .title__strong {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        display: block;
+        font-family: "MuseoSansMedium";
+      }
+
+      .strong {
+        font-weight: bold;
+        font-family: "MuseoSansMedium";
+      }
+
+      a {
+        color: #262626;
+        font-size: 15px;
+        text-decoration: none;
+        border-bottom: 1px solid;
+        &:hover {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .contacts-map {
+    margin-bottom: 50px;
+  }
+
+  .contacts-form-wrapper {
+    .contacts-form {
+      .form__title {
+        color: #262626;
+        font-size: 48px;
+        margin-bottom: 30px;
+        font-weight: 100;
+        font-family: "MuseoSansLight";
+      }
+
+      .form-group {
+        margin-bottom: 14px;
+      }
+
+      .form__field {
+        border: 1px solid #e4e4e4;
+        height: 38px;
+        border-radius: 0px;
+        box-shadow: none;
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: #cccccc;
+          font-size: 15px;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          color: #cccccc;
+          font-size: 15px;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: #cccccc;
+          font-size: 15px;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          color: #cccccc;
+          font-size: 15px;
+        }
+      }
+
+      .form__textarea {
+        height: 70px;
+        border: 1px solid #e4e4e4;
+        resize: none;
+        border-radius: 0px;
+        box-shadow: none;
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: #cccccc;
+          font-size: 15px;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          color: #cccccc;
+          font-size: 15px;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: #cccccc;
+          font-size: 15px;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          color: #cccccc;
+          font-size: 15px;
+        }
+      }
+
+      .form__btn {
+        width: 171px;
+        height: 40px;
+        border: 2px solid #c8c8ab;
+        color: #262626;
+        font-size: 15px;
+        text-transform: uppercase;
+        background: #ffffff;
+        outline: none;
+        letter-spacing: 1.4px;
+        &:hover {
+          background: #c8c8ab;
+        }
+      }
+
+      .form-check {
+        font-size: 15px;
+        color: #b4b4b4;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        a {
+          font-size: 15px;
+          color: #b4b4b4;
+          text-decoration: underline;
+        }
+
+        .form-check__checkbox {
+          border: 1px solid #dcdcdc;
+          width: 18px;
+          height: 18px;
+          display: block;
+          float: left;
+          margin-right: 10px;
+          cursor: pointer;
+          position: relative;
+        }
+
+        .form-check-label {
+          cursor: pointer;
+          font-weight: normal;
+        }
+
+        input {
+          display: none;
+        }
+
+        input:checked + .form-check__checkbox  {
+          &:before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            background: #c8c8ab;
+          }
+        }
+
+        &.invalid {
+          color: red;
+          a {
+            color: red;
+          }
+
+          .form-check__checkbox {
+            border: 1px solid red;
+          }
+        }
+      }
+
+      .form__notice {
+        margin-top: 10px;
+        font-size: 15px;
+        color: #b4b4b4;
+        font-style: italic;
+      }
+
+      .form__result {
+        display: none;
+        &.result--fail {
+          margin-top: 10px;
+          font-size: 15px;
+          color: #b4b4b4;
+          color: red;
+        }
+
+        &.result--success {
+          margin-top: 10px;
+          font-size: 15px;
+          color: #b4b4b4;
+          color: green;
+        }
+      }
+    }
+  }
+}
+
+
+.contacts-add-info {
+  margin-top: 70px;
+  background: #f4f4f3;
+  padding-top: 40px;
+  padding-bottom: 70px;
+
+  .contacts-add-info__title {
+    color: #262626;
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #c4c2a7;
+    tr {
+      border-bottom: 1px solid #c4c2a7;
+
+      td {
+        border-left: 1px solid #c4c2a7;
+        color: #000000;
+        font-size: 15px;
+        padding-left: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .contacts-page {
+    .contacts-block {
+      .contacts-block-info {
+          width: 100%;
+      }
+    }
+
+    .contacts-map {
+      display: none;
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

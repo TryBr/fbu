@@ -1,0 +1,34 @@
+/*---------------
+    #Site Map
+---------------*/
+.site-map {
+  padding-bottom: 50px;
+  .site-map-sub__title {
+    color: #262626;
+    font-size: 20px;
+    margin-top: 26px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    &:first-child {
+      margin-top: 0px;
+    }
+  }
+
+  ul {
+    li {
+      padding-left: 10px !important;
+      &:before {
+        display: none !important;
+      }
+      a {
+        color: #262626;
+        font-size: 15px;
+        text-decoration: none;
+        border-bottom: 1px solid;
+        &:hover {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
