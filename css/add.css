@@ -1391,6 +1391,9 @@ html {
   cursor: pointer;
   overflow: hidden;
 }
+.services .services-item.services-item--hide {
+  display: none;
+}
 .services .services-item .services-item__icon {
   margin: 0 auto;
   text-align: center;
@@ -1431,6 +1434,28 @@ html {
 .services .col-lg-3:nth-child(5) .services-item .services-item__title {
   line-height: 84px;
 }
+.services .services-show__btn {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #262626;
+  font-family: "MuseoSansMedium";
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 190px;
+  height: 55px;
+  border: 2px solid #c8c8ab;
+  background: #fff;
+  line-height: 55px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: block;
+  letter-spacing: 1.4px;
+}
+.services .services-show__btn:hover {
+  background: #c8c8ab;
+}
 .services .services-all__btn {
   cursor: pointer;
   text-align: center;
@@ -1449,6 +1474,7 @@ html {
   margin-top: 40px;
   display: block;
   letter-spacing: 1.4px;
+  display: none;
 }
 .services .services-all__btn:hover {
   background: #c8c8ab;
@@ -1944,7 +1970,6 @@ html {
 }
 .partners .partners-item {
   text-align: center;
-  cursor: pointer;
 }
 .partners .partners-item .partners-item-logo-wrapper {
   height: 80px;
@@ -2583,6 +2608,10 @@ html {
   margin-bottom: 10px;
   font-weight: bold;
 }
+.site-map .site-map-sub__title a {
+  color: #262626;
+  text-decoration: none;
+}
 .site-map .site-map-sub__title:first-child {
   margin-top: 0px;
 }
@@ -3180,6 +3209,10 @@ html {
   transition: all .15s;
   -webkit-transition: all .15s;
 }
+.search-page-results .search-page-results-item .results-item__title strong,
+.search-page-results .search-page-results-item .results-item__title b {
+  font-family: "MuseoSansBlack";
+}
 .search-page-results .search-page-results-item .results-item__title:hover {
   border-bottom-color: #262626 !important;
 }
@@ -3187,6 +3220,10 @@ html {
   color: #262626;
   font-size: 15px;
   font-size: 300;
+}
+.search-page-results .search-page-results-item .results-item__description strong,
+.search-page-results .search-page-results-item .results-item__description b {
+  font-family: "MuseoSansBlack";
 }
 /*---------------
     #Responsive
@@ -3235,7 +3272,6 @@ html {
 .certificates .certificates-item {
   background: #ffffff;
   margin-bottom: 30px;
-  cursor: pointer;
   text-align: center;
 }
 .certificates .certificates-item:hover .certificates-item-photo {
@@ -3245,6 +3281,7 @@ html {
 }
 .certificates .certificates-item .certificates-item-photo {
   margin-bottom: 25px;
+  cursor: pointer;
 }
 .certificates .certificates-item .certificates-item-photo .certificates-item__photo {
   width: 100%;
@@ -3313,7 +3350,7 @@ html {
   position: absolute;
   left: 125px;
   top: 21px;
-  background: url("../img/left__arrow__menu__icon.png") no-repeat center center;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADhmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmIxMzQzNzZmLWY0NmYtMmE0My05MDY2LWM1MThhMGRlMDliOCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxMURFQ0Y5NTY3OTgxMUU3OUE3N0NEM0Q2MzczNkM5QiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxMURFQ0Y5NDY3OTgxMUU3OUE3N0NEM0Q2MzczNkM5QiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNS41IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFlYjNiOTk2LWJjN2YtNDU0ZC1hMTI2LTExM2E0YjQyMDVjNSIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOmNhM2QzMDRhLTQ1ZTEtMTFlNy04M2M4LTljYTY0OWVmNmE2ZSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpjsxVQAAABcSURBVChTY1RUVGSAAkEgrgfiAjAPB2CC0uJAvB+I7cA8PABkgy6Q3gXEIE0g068BMU4A0nAcSFtAuIQBWTaAaDEg3gnE/4HYCCSAC8A8/QqInYD4IJiHEzAwAADuFA2BW07llwAAAABJRU5ErkJggg==") no-repeat center center;
   width: 12px;
   height: 7px;
   -webkit-transform: rotate(90deg);

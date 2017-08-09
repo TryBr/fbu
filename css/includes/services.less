@@ -14,6 +14,9 @@
     margin-bottom: 40px;
     cursor: pointer;
     overflow: hidden;
+    &.services-item--hide {
+      display: none;
+    }
     .services-item__icon {
       margin: 0 auto;
       text-align: center;
@@ -66,6 +69,29 @@
     }
   }
 
+  .services-show__btn {
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #262626;
+    font-family: "MuseoSansMedium";
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 190px;
+    height: 55px;
+    border: 2px solid #c8c8ab;
+    background: #fff;
+    line-height: 55px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: block;
+    letter-spacing: 1.4px;
+    &:hover {
+      background: #c8c8ab;
+    }
+  }
+
   .services-all__btn {
     cursor: pointer;
     text-align: center;
@@ -84,6 +110,7 @@
     margin-top: 40px;
     display: block;
     letter-spacing: 1.4px;
+    display: none;
     &:hover {
       background: #c8c8ab;
     }

@@ -280,5 +280,40 @@ $(document).ready(function() {
     return false;
   });
 
+  /*---------------
+      #SERVICES ITEMS
+  ---------------*/
+  var servicesItems = $('.services').find('.services-item').length;
+  var servicesItemsHide = 0;
+  var servicesItemsShown = 0;
+  var servicesItemsShownTotal = 0;
+  if (servicesItems > 8)  {
+    $('.services').find('.services-item').each(function(i,elem) {
+      if (i + 1 > 8)  {
+        $(this).addClass("services-item--hide");
+        servicesItemsHide ++;
+      }
+    });
+  }
+
+  /*---------------
+      #SHOW SERVICES ITEMS
+  ---------------*/
+  $('.services-show__btn').click(function() {
+    $('.services').find('.services-item--hide').each(function(i,elem) {
+      if ( (!$(this).hasClass('services-item--shown')) && (servicesItemsShown <= 3) ) {
+        $(this).show();
+        $(this).addClass('services-item--shown');
+        servicesItemsShown ++;
+        // $(this).removeClass('services-item--hide');
+      }
+    });
+    servicesItemsShownTotal = servicesItemsShownTotal + servicesItemsShown;
+    if (servicesItemsHide == servicesItemsShownTotal) {
+      $('.services-show__btn').hide();
+      $('.services-all__btn').show();
+    }
+    servicesItemsShown = 0;
+  });
 
 });
