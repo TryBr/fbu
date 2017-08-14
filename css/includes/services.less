@@ -117,6 +117,11 @@
   }
 }
 
+.swiper-services {
+  .col-lg-3 {
+    width: 22.5%;
+  }
+}
 
 /*------------------------
     #Services full info
@@ -126,10 +131,11 @@
 
   .container {
     padding: 0px;
+    position: relative;
   }
 
   .services-full-info-item {
-    height: 140px;
+    height: 40px;
     border: 2px solid #f4f4f3;
     color: #262626;
     font-family: "MuseoSansMedium";
@@ -190,6 +196,26 @@
       }
     }
   }
+
+  .services-navigation__prev__btn {
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAASCAYAAACNdSR1AAAAtklEQVQ4T5WSsQnCUBiEvwtYu4IbaOcONhZaitZOEMEBsoED2AhiZWHhAi5gnxWsLXIS4cFDkvjy6u94d/efSHs7Sbn+sIMsyw62V7bXXfBQ0gUY254DjzZ4JOkGyPYMKGsHTfBU0hV42l4Ar2D1F15KOko6VVW1Bd5xphjOJRW290DRFLyG48Qb4NzWkCTdgUlI3FVlP7iXjejbpICxzeTqgij5KEGQfO4gSB5SECRPNA7+Hf8HhGdgoUIrSPIAAAAASUVORK5CYII=") no-repeat;
+      width: 11px;
+      height: 18px;
+      position: absolute;
+      left: -35px;
+      top: 60px;
+      cursor: pointer;
+  }
+
+  .services-navigation__next__btn {
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAASCAYAAACNdSR1AAAAtElEQVQ4T62SsQkCURBE31xgbAvmNmALBkYqmFiAHVwBglZgrBhqYGIPZtqBHYix8Ed+8OE4Tu8LbjpvYHd2JOlhew2saBkBE0k7SfsQwgJ4ffJEOM5A0gm42R4DzyZDgqPWk3QGbHsI3OuGKhy1rqQj0Lc9Ai5VQx2OWqcoio3tme05cEiGJjhppaSl7RKIafENjvpU0jYl1QZXk7r+Fc5eI+vA7Oiyn5L97uwi5Vf0l/K/AaYFX5cdW77HAAAAAElFTkSuQmCC") no-repeat;
+      width: 11px;
+      height: 18px;
+      position: absolute;
+      right: -35px;
+      top: 60px;
+      cursor: pointer;
+  }
 }
 
 .services-full-content {
@@ -237,7 +263,13 @@
 ---------------*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-
+  .services-full-info {
+    .swiper-slide {
+      .col-lg-3 {
+          width: 96%;
+      }
+    }
+  }
 }
 
 /* Medium Devices, Desktops */
@@ -259,8 +291,8 @@
     }
 
     .services-full-info-item {
-      line-height: 140px !important;
-      padding: 0px;
+      line-height: auto;
+      height: auto;
       &:hover {
         &:after {
           display: none !important;
@@ -300,7 +332,13 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+  .services-full-info {
+    .swiper-slide {
+      .col-lg-3 {
+        width: auto;
+      }
+    }
+  }
 }
 
 /* Custom, iPhone Retina */
