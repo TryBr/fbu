@@ -128,6 +128,21 @@ body {
     margin-top: 12px;
   }
 
+  .content__title__link {
+    color: #bfbba0;
+    font-size: 15px;
+    text-align: right;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 1px dotted #bfbba0;
+    text-decoration: none;
+    float: right;
+    margin-top: 35px;
+    &:hover {
+      border-bottom: 1px dotted transparent;
+    }
+  }
+
   .content__date {
     color: #262626;
     font-size: 13px;
@@ -434,6 +449,11 @@ body {
 ---------------*/
 @import "includes/faq";
 
+/*---------------
+    #PERSONAL CABINET
+---------------*/
+@import "includes/personal-cabinet";
+
 
 /*---------------
     #Responsive
@@ -456,6 +476,13 @@ body {
 
     .news-slider-nav {
       display: none;
+    }
+
+    .content__title__link {
+      float: left;
+      text-align: left;
+      white-space: nowrap;
+
     }
   }
 }

@@ -201,6 +201,20 @@ $(document).ready(function() {
       $('.services-content-item-info-5').show();
     });
 
+    $('.services-content-item-6').click(function() {
+      $('.services-content-item').removeClass('active');
+      $(this).addClass('active');
+      $('.services-content-item-info').hide();
+      $('.services-content-item-info-6').show();
+    });
+
+    $('.services-content-item-7').click(function() {
+      $('.services-content-item').removeClass('active');
+      $(this).addClass('active');
+      $('.services-content-item-info').hide();
+      $('.services-content-item-info-7').show();
+    });
+
 
     /*---------------
         #MENU STICKY
