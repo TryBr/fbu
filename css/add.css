@@ -2692,7 +2692,6 @@ html {
   height: 465px;
   background: #ffffff;
   margin-bottom: 30px;
-  cursor: pointer;
 }
 .news .news-item:hover {
   -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
@@ -3382,8 +3381,9 @@ html {
   display: block;
 }
 .show-the-services-menu {
-  left: -193px;
-  width: 440px;
+  top: -19px;
+  left: -226px;
+  width: 507px;
   height: 55px;
   line-height: 48px;
   background: #f7f6f0;
@@ -3474,6 +3474,9 @@ html {
   background: #f7f6f0;
   padding-left: 58px;
   border-right: 1px solid #ecebe6;
+}
+.show-the-services-content.show-the-services-content--services .services-content-item {
+  padding: 29.3px 20px;
 }
 .show-the-services-content .services-content-item {
   font-size: 15px;
@@ -3979,13 +3982,16 @@ html {
 .personal-cabinet-form .form__btn:hover {
   background: #c8c8ab;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 2000px) {
   .personal-cabinet-form .form__btn {
     margin-top: 20px;
   }
   .personal-cabinet-form .field-wrapper.field-wrapper--add {
     float: none;
     width: 270px;
+  }
+  .personal-cabinet-form .form-field-notice {
+    margin-top: 0px;
   }
 }
 /* Medium Devices, Desktops */
