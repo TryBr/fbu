@@ -263,6 +263,21 @@ $(document).ready(function() {
   });
 
   /*---------------
+      #ADD FIELDS
+  ---------------*/
+  $('.form__field__add__link').click(function() {
+    $(this).parent().find('.form__field__add__link').last().after("<div class='field-wrapper field-wrapper--add clearfix'><input class='form-control form__field' type='text' value='' id=''><div class='form__field__delete__link'></div></div>");
+  });
+
+  /*---------------
+      #REMOVE FIELDS
+  ---------------*/
+  $(document).on('click', '.form__field__delete__link', function(events){
+    $(this).closest('.field-wrapper').addClass('field-wrapper-remove');
+    $(this).closest('.field-wrapper-remove').remove();
+  });
+
+  /*---------------
       #FANCYBOX
   ---------------*/
   $(".fancybox").fancybox();
@@ -329,5 +344,12 @@ $(document).ready(function() {
     }
     servicesItemsShown = 0;
   });
+
+
+  /*---------------
+      #SELECT
+  ---------------*/
+  $('.selectpicker').selectpicker();
+
 
 });

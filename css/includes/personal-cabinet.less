@@ -20,8 +20,106 @@
     color: #7b7b7b;
     font-size: 15px;
     width: 270px;
-    float: left;
     margin-bottom: 20px;
+  }
+
+  .form__select {
+    border: 1px solid #e4e4e4;
+    height: 38px !important;
+    width: 270px !important;
+    border-radius: 0px;
+    box-shadow: none;
+    color: #7b7b7b;
+    font-size: 15px;
+    margin-bottom: 20px !important;
+    line-height: 38px;
+    outline: none;
+    .btn-default {
+      background: none;
+      border: none;
+      box-shadow: none;
+      border-radius: 0px;
+      outline: none;
+    }
+
+    .filter-option {
+      width: 92% !important;
+      height: 24px;
+      line-height: 24px;
+    }
+
+    .dropdown-menu {
+      box-shadow: none !important;
+      border-radius: 0px !important;
+      top: 125%;
+      left: -1px;
+      ul.dropdown-menu.inner {
+        padding: 0px !important;
+        margin: 0px !important;
+        list-style: none !important;
+        li {
+          padding: 0px;
+          font-size: 15px;
+          color: #7b7b7b;
+          &:before {
+            display: none;
+          }
+
+          a {
+            font-size: 15px;
+            color: #7b7b7b;
+            padding-left: 12px !important;
+
+            &:hover {
+              background: none !important;
+
+              .text {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          &.selected {
+            a {
+              font-size: 15px;
+              color: #7b7b7b;
+
+              .text {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bs-caret {
+      .caret {
+        border: none !important;
+        background: url("../img/form__select__icon.png");
+        width: 16px;
+        height: 9px;
+      }
+    }
+  }
+
+  .field-wrapper {
+    float: left;
+    position: relative;
+  }
+
+  .form__field__delete__link {
+    width: 13px;
+    height: 13px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxZDFlNjlhMC1lMTdhLTY0NGQtYTk3Mi1mMjM1NWU3OTg0YTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTEwNjcxN0Q4MEIyMTFFNzg4NUFDOURBNDYyQzc4RDkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTEwNjcxN0M4MEIyMTFFNzg4NUFDOURBNDYyQzc4RDkiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjNiNTdlYi03NGIyLTc0NDItYTQzOS0xZDRmM2RlZTk1MzgiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpmMjczMjdmNi03ZGM2LTExZTctYTZjYS1kOGJhZmM2ZDVmYmEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4ffPeNAAAAkElEQVR42oTQzQmAMAwG0BpcSTfx7skZ9KSedAcPDqB47wp1KROIUGPaFD5bYh79Kbz3l3NuwdzOHhVmAPysmJMLFqC+lVDANAZ8AfUF4GIOfgAVIPqpwR+QSMJWAzRK5fzUMGI2TCeBttN7pJnBhKktFN9h5/mQEHKvFN3xAyH3SikIvEgBFRLqDSBh/wgwANFqLt1zoJIyAAAAAElFTkSuQmCC");
+    position: absolute;
+    top: 13px;
+    right: 11px;
+    z-index: 1;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   .form__field__add__link {
@@ -69,6 +167,7 @@
     display: block;
     letter-spacing: 1.4px;
     outline: none;
+    margin-top: 5px;
     &:hover {
       background: #c8c8ab;
     }
@@ -81,7 +180,26 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+  .personal-cabinet-form {
 
+    .field-wrapper {
+      float: none;
+      &.field-wrapper--add {
+        margin-top: 20px;
+      }
+    }
+
+    .form__field__add__link {
+      margin-left: 0px;
+      float: none;
+      display: inline;
+    }
+
+    .form__field {
+      width: 100%;
+      float: none;
+    }
+  }
 }
 
 /* Small Devices, Tablets */
@@ -90,15 +208,7 @@
 }
 
 @media only screen and (max-width : 767px) {
-  .personal-cabinet-form {
-    .form__field__add__link {
-      margin-left: 0px;
-    }
 
-    .form__field {
-      width: 100%;
-    }
-  }
 }
 
 /* Extra Small Devices, Phones */
