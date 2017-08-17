@@ -239,7 +239,7 @@ $(document).ready(function() {
     ---------------*/
     $(document).scroll(function() {
     var y = $(this).scrollTop();
-      if (y > 500) {
+      if (y > 150) {
         $('.top-navbar-sticky').css("opacity", "1");
         $('.top-navbar-sticky').addClass('active');
       } else {
@@ -248,6 +248,16 @@ $(document).ready(function() {
       }
     });
   }
+
+
+    /*---------------
+        # STICKY HEADER
+    ---------------*/
+    $(window).resize(function(){
+      if ( ($(window).width() < 1199)) {
+        $('.top-navbar-sticky').css("display", "none");
+      }
+    });
 
   /*---------------
       #BACK TO TOP
@@ -307,6 +317,8 @@ $(document).ready(function() {
   ---------------*/
   $(".services-item__title").dotdotdot();
 
+
+
   /*---------------
       #NEWS
   ---------------*/
@@ -317,6 +329,10 @@ $(document).ready(function() {
   var NewsItemNewHeight = newsItemHeight - newsItemPhoto - newsItemDate - newsItemTitle - 100;
 
   $(".news-item__description").dotdotdot({height: NewsItemNewHeight});
+
+  $(window).resize(function() {
+    $(".news-item__description").dotdotdot({height: NewsItemNewHeight});
+  });
 
   /*---------------
       #SEND FORM
@@ -345,6 +361,30 @@ $(document).ready(function() {
     });
   }
 
+  if ( ($(window).width() < 1199)) {
+    if (servicesItems > 4)  {
+      $('.services').find('.services-item').each(function(i,elem) {
+        if (i + 1 > 4)  {
+          $(this).addClass("services-item--hide");
+          servicesItemsHide ++;
+        }
+      });
+    }
+  }
+
+  $(window).resize(function() {
+    if ( ($(window).width() < 1199)) {
+      if (servicesItems > 4)  {
+        $('.services').find('.services-item').each(function(i,elem) {
+          if (i + 1 > 4)  {
+            $(this).addClass("services-item--hide");
+            servicesItemsHide ++;
+          }
+        });
+      }
+    }
+  });
+
   /*---------------
       #SHOW SERVICES ITEMS
   ---------------*/
@@ -371,5 +411,16 @@ $(document).ready(function() {
   ---------------*/
   $('.selectpicker').selectpicker();
 
+
+  /*---------------
+      #POLLS
+  ---------------*/
+  $('.answer-form__radio').change(function(){
+      if ($('.answer-form__radio').is(':checked') == true){
+          document.getElementById('answer-form__btn').disabled = false;
+      } else {
+          document.getElementById('answer-form__btn').disabled = true;
+      }
+  });
 
 });
