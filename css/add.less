@@ -462,8 +462,11 @@ body {
 @media only screen and (max-width : 1199px) {
   .content {
     .content-back__link {
-      border: none;
-      display: block;
+      display: inline;
+      font-size: 22px;
+      &:before {
+        top: 6px;
+      }
     }
   }
 }

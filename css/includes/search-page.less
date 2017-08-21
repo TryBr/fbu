@@ -90,7 +90,6 @@
       margin-bottom: 10px;
       display: inline-block;
       text-decoration: none;
-      height: 34px;
       border-bottom: 1px solid transparent;
       strong, b {
         font-family: "MuseoSansBlack";
@@ -117,7 +116,7 @@
     #Responsive
 ---------------*/
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 1199px) {
   .search-page {
     .search-page-form {
       .form-group {
@@ -133,6 +132,14 @@
 
       .form__btn {
         margin-left: 0px;
+      }
+    }
+  }
+
+  .search-page-results {
+    .search-page-results-item {
+      .results-item__title {
+        border: none;
       }
     }
   }
