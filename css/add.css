@@ -136,6 +136,9 @@ html {
 .img-responsive {
   max-width: 100%;
 }
+.table-responsive {
+  border: none;
+}
 .content-wrapper.content-wrapper--gray {
   background: #f4f4f3;
   margin-top: -50px;
@@ -304,6 +307,7 @@ html {
   color: #000000;
   font-size: 15px;
   padding-left: 20px;
+  padding-right: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -636,7 +640,7 @@ html {
   text-transform: uppercase;
   font-size: 16px;
   margin-top: 10px;
-  letter-spacing: 1.55px;
+  letter-spacing: 1.4px;
   display: block;
 }
 .header .header-info {
@@ -3307,6 +3311,14 @@ html {
   border-radius: 0px;
   box-shadow: none;
 }
+@media only screen and (max-width: 1199px) {
+  .polls .before-the-answer .form-radio-wrapper {
+    clear: both;
+  }
+  .polls .before-the-answer .form-radio-wrapper .form-radio__label {
+    width: 85%;
+  }
+}
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   .polls-after-answer .progress-group {
@@ -3450,13 +3462,16 @@ html {
     float: none;
   }
   .search-page .search-page-form .form__input {
-    width: 90%;
+    width: 288px;
     margin: 0 auto;
     display: block;
     margin-bottom: 20px;
+    margin-left: 15px;
+    clear: both;
   }
   .search-page .search-page-form .form__btn {
     margin-left: 15px;
+    float: left;
   }
 }
 /* Extra Small Devices, Phones */
